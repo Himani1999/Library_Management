@@ -1,0 +1,21 @@
+body{
+    background-color: skyblue;
+    margin: 0;
+    padding: 0;
+}
+.maincontainer{
+    width: ;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.overflowauto {
+    margin: auto;
+    background-color: lightblue;
+    height: 480px;
+    width: 60%;
+    overflow: auto;
+  }

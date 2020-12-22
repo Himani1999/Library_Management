@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .checkboxes {
+        max-width: 140px;
+        margin: .5rem auto;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: .5rem;
+    }
+
+    .button {
+        display: block;
+        width: 140px;
+        margin: .5rem auto;
+        padding: .5rem;
+        border: none;
+        border-radius: .25rem;
+    }
+
+    button .check-all {
+        background-color: lightgreen;
+    }
+
+    .check-all:hover {
+        background-color: lighten(lightgreen, 10%);
+    }
+
+    .uncheck-all {
+        background-color: tomato;
+    }
+
+    .uncheck-all:hover {
+        background-color: lighten(tomato, 10%);
+    }
+</style>
+
+<body>
+    <form class="checkboxes">
+        <ul>
+            <li>
+                <input type="checkbox" id="1">
+                <label for="1">Checkbox 1</label>
+            </li>
+            <li>
+                <input type="checkbox" id="2">
+                <label for="2">Checkbox 2</label>
+            </li>
+            <li>
+                <input type="checkbox" id="3">
+                <label for="3">Checkbox 3</label>
+            </li>
+            <li>
+                <input type="checkbox" id="4">
+                <label for="4">Checkbox 4</label>
+            </li>
+        </ul>
+    </form>
+    <button class="button check-all">Check all</button>
+    <button class="button uncheck-all">Uncheck all</button>
+    <script>
+        $(function () {
+            $('.check-all').on('click', function () {
+                $('.checkboxes input:checkbox').prop('checked', true);
+            });
+            $('.uncheck-all').on('click', function () {
+                $('.checkboxes input:checkbox').prop('checked', false);
+            });
+        });
+    </script>
+</body>
+
+</html>

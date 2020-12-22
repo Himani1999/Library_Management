@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="college.css">
+    <link rel="stylesheet" href="collegeMQ.css">
+    <title>Category</title>
+</head>
+<body>
+    <div class="maincontainer">
+        <p id="hell"></p>
+        <h1>Filter Data</h1>
+        <label for="first"></label>
+        <input type="text" placeholder="More than" id="first">
+        <label for="second"></label>
+        <input type="text" placeholder="Less than" id="second">
+
+        <input type="submit" id="btn">
+       <br><br>
+        <div class="container">
+            <div>
+        <label for="third"></label>
+        <input type="text" placeholder="Gender" id="third">
+
+        <input type="submit" id="btn1">
+    </div>
+    <div>
+        <label for="fourth"></label>
+        <input type="text" placeholder="Department" id="fourth">
+
+        <input type="submit" id="btn2">
+    </div>
+    <div>
+    <label for="fifth"></label>
+        <input type="text" placeholder="id" id="fifth">
+
+        <input type="submit" id="btn3">
+    </div>
+    </div>
+    <br><br>
+    <div class="overflowauto">
+    <table border="1" cellspacing="0" id="table" >
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+        
+    </table>
+    </div>  
+</div>
+
+<script src="college.js"></script>
+<script>allData();</script>
+</body>
+</html>

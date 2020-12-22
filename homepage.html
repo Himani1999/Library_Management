@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Library Management System</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: cornsilk;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .library{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: gray;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin-top: 30px;
+    }
+
+    #batch {
+        background-color: skyblue;
+        border: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <marquee onmouseover="stop()" onmouseout="start()"><div class="library">Library Management System</div></marquee>
+        <hr>
+        <div class="header">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="batch">Batch
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">2018-2021</a></li>
+                    <li><a href="#">2019-2022</a></li>
+                    <li><a href="#">2020-2022</a></li>
+                    <li><a href="#">2021-2023</a></li>
+                    <li><a href="#">2022-2024</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="batch">Course
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">BCA</a></li>
+                    <li><a href="#">BBA</a></li>
+                    <li><a href="#">B.Com</a></li>
+                    <li><a href="#">MCA</a></li>
+                    <li><a href="#">MBA</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="batch">Session
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">2020-2021</a></li>
+                    <li><a href="#">2021-2022</a></li>
+                    <li><a href="#">2022-2023</a></li>
+                    <li><a href="#">2023-2024</a></li>
+                    <li><a href="#">2024-2025</a></li>
+                    <li><a href="#">2025-2026</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+            <table border="1" cellspacing="0" id="table"> 
+                <tr>
+                    <th><input type="checkbox" id="over"></th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Batch</th>
+                    <th>Session</th>
+                    <th>Book Name</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="input"></td>
+                    <td>Himani Sharma</td>
+                    <td>BCA</td>
+                    <td>2018-2021</td>
+                    <td>2020-2021</td>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="input"></td>
+                    <td>xyz</td>
+                    <td>BCA</td>
+                    <td>2019-2022</td>
+                    <td>2020-2021</td>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="input"></td>
+                    <td>Shivam Sharma</td>
+                    <td>BBA</td>
+                    <td>2018-2021</td>
+                    <td>2020-2021</td>
+                    <td>Management</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="input"></td>
+                    <td>abc</td>
+                    <td>BBA</td>
+                    <td>2019-2022</td>
+                    <td>2020-2021</td>
+                    <td>stats</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="input"></td>
+                    <td>Sakshi</td>
+                    <td>BCA</td>
+                    <td>2018-2021</td>
+                    <td>2020-2021</td>
+                    <td>OS</td>
+                </tr>
+            </table></div>
+        </div>
+       <!--
+<script>
+        
+    var overall = document.querySelector('over');
+  var ingredients = document.querySelectorAll('input');
+
+  overall.addEventListener('click', function(e) {
+    e.preventDefault();
+  });
+
+  for(var i = 0; i < ingredients.length; i++) {
+    ingredients[i].addEventListener('click', updateDisplay);
+  }
+
+  function updateDisplay() {
+    var checkedCount = 0;
+    for(var i = 0; i < ingredients.length; i++) {
+      if(ingredients[i].checked) {
+        checkedCount++;
+      }
+    }
+
+    if(checkedCount === 0) {
+      overall.checked = false;
+      overall.indeterminate = false;
+    } else if(checkedCount === ingredients.length) {
+      overall.checked = true;
+      overall.indeterminate = false;
+    } else {
+      overall.checked = false;
+      overall.indeterminate = true;
+    }
+  }
+</script>
+
+<!--
+
+        <p id="hell"></p>
+            <h1>Filter Data</h1>
+            <label for="third"></label>
+            <input type="text" placeholder="Gender" id="third">
+
+            <input type="submit" id="btn1">
+            
+        <br><br>
+        <table border="1" cellspacing="0" id="table">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+            
+        </table>
+    </div>
+
+
+        <script src="home.js"></script>
+        <script>allData();</script>
+-->
+    </div>
+</body>
+
+</html>
